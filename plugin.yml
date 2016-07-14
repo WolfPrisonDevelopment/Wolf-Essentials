@@ -1,0 +1,152 @@
+main: me.fionster_fish_1.wessentials.WEssentials
+version: 2016.4
+name: WolfEssentials
+author: fionster_fish_1
+
+commands:
+    wgm:
+        description: Wolf Essentials GameMode Command
+    ytrec:
+        description: Wolf Essentials Yt Record Command
+    twitchstream:
+        description: Wolf Essentials Twitch Stream Command
+    wolfessentials:
+        description: Wolf Essentials Command
+    purchasehistory:
+        description: Purchase History Command (WolfEssentials Plugin)
+    rankperms:
+        description: Rank Perms Command (WolfEssentials Plugin)
+    report:
+        description: Report Command (WolfEssentials)
+    setrank:
+        description: Setrank Command
+    purchaseanouncement:
+        description: Purchase Anouncer
+
+permissions:
+    wolfessentials.gm:
+        default: op
+    wolfessentials.ytrec:
+        default: op
+    wolfessentials.twitchstream:
+        default: op
+    wolfessentials.chatfilter.check:
+        default: not op
+    wolfessentials.wci:
+        default: op
+    wolfessentials.purchasehistory:
+        default: true
+    wolfessentials.purchase.ranks.ironr:
+        default: false
+    wolfessentials.purchase.ranks.goldr:
+        default: false
+    wolfessentials.purchase.ranks.redstoner:
+        default: false
+    wolfessentials.purchase.ranks.obsidianr:
+        default: false
+    wolfessentials.purchase.ranks.emeraldr:
+        default: false
+    wolfessentials.purchase.ranks.diamondr:
+        default: false
+    wolfessentials.purchase.ranks.vipr:
+        default: false
+    wolfessentials.purchase.ranks.gummyr:
+        default: false
+    wolfessentials.purchase.ranks.wolfgodr:
+        default: false
+    wolfessentials.purchase.up.iron.to.gold:
+        default: false
+    wolfessentials.purchase.up.gold.to.redstone:
+        default: false
+    wolfessentials.purchase.up.redstone.to.obsidian:
+        default: false
+    wolfessentials.purchase.up.obsidian.to.emerald:
+        default: false
+    wolfessentials.purchase.up.emerald.to.diamond:
+        default: false
+    wolfessentials.purchase.up.diamond.to.vip:
+        default: false
+    wolfessentials.purchase.up.vip.to.gummy:
+        default: false
+    wolfessentials.purchase.up.gummy.to.wolfgod:
+        default: false
+    wolfessentials.purchase.suf.yolo:
+        default: false
+    wolfessentials.purchase.suf.swag:
+        default: false
+    wolfessentials.purchase.suf.cookie:
+        default: false
+    wolfessentials.purchase.suf.master:
+        default: false
+    wolfessentials.purchase.suf.bae:
+        default: false
+    wolfessentials.purchase.suf.wolfer:
+        default: false
+    wolfessentials.purchase.suf.wizard:
+        default: false
+    wolfessentials.purchase.suf.noob:
+        default: false
+    wolfessentials.purchase.suf.sapling:
+        default: false
+    wolfessentials.purchase.suf.god:
+        default: false
+    wolfessentials.purchase.suf.alone:
+        default: false
+    wolfessentials.purchase.suf.stupid:
+        default: false
+    wolfessentials.purchase.perms.as:
+        default: false
+    wolfessentials.purchase.perms.fly:
+        default: false
+    wolfessentials.purchase.perms.sellall:
+        default: false
+    wolfessentials.purchase.un.unban:
+        default: false
+    wolfessentials.purchase.un.unmute.1:
+        default: false
+    wolfessentials.purchase.un.unmute.2:
+        default: false
+    wolfessentials.rankperms:
+        default: true
+    wolfessentials.rank.iron:
+        default: false
+    wolfessentials.rank.gold:
+        default: false
+    wolfessentials.rank.redstone:
+        default: false
+    wolfessentials.rank.obsidian:
+        default: false
+    wolfessentials.rank.emerald:
+        default: false
+    wolfessentials.rank.diamond:
+        default: false
+    wolfessentials.rank.vip:
+        default: false
+    wolfessentials.rank.trainee:
+        default: false
+    wolfessentials.rank.helper:
+        default: false
+    wolfessentials.rank.mod:
+        default: false
+    wolfessentials.rank.admin:
+        default: false
+    wolfessentials.rank.builder:
+        default: false
+    wolfessentials.rank.co:
+        default: false
+    wolfessentials.rank.dev:
+        default: false
+    wolfessentials.rank.manager:
+        default: false
+    wolfessentials.rank.owner:
+        default: false
+    wolfessentials.reload:
+        default: op
+    wolfessentials.player:
+        default: false
+    wolfessentials.staff:
+        default: false
+    wolfessentials.purchaseanounce:
+        default: op
+    wolfessentials.setrank:
+        default: op

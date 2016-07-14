@@ -1,0 +1,50 @@
+# |-------------------|
+# |-------Wolf--------|
+# |----Essentials-----|
+# |-------------------|
+
+# Staff Screen Title:
+# Note:
+# Chat Color Is Enabled
+# THIS IS SECOND LINE OF THE SCREEN TITLE ONLY
+
+staffmessage: '&8&lStaff C:'
+# Screen Title:
+# Note:
+# Chat Color Is Enabled!
+
+playermainmessage: '&4&lWolf&9&lPrison'
+
+playersubmessage: '&8&lWelcome Back'
+# Tab Stuff:
+# Note:
+# Chat Color Is Enabled!
+
+headermessage: '&4&lWolf&9&lPrison'
+
+footermessage: '&8&lplay.&4&lwolf&9&lprison&8&l.net'
+#Chat Welcome Message:
+# Note:
+# Chat Color Is Enabled
+
+welcomemessage: '&8&lWelcome Back To &4&lWolf&9&lPrison'
+
+#OnSleepAndOnAwake:
+# Note:
+# Chat Color Is Enabled
+
+onsleepmessage: '&9Enjoy A Well Earned Rest &7:)'
+
+onawakemessage: '&9Wakey Wakey'
+
+# Respawn Event:
+# Note:
+# Chat Color Is Enabled
+
+respawnmessage: '&9Superman Never Die!'
+
+#Reload Message:
+# Note:
+# Chat Color Is Enabled
+
+reloadmessage: '&9Reloaded Successfully'
