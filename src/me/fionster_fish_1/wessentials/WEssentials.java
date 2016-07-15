@@ -880,43 +880,19 @@ public class WEssentials extends JavaPlugin implements Listener {
         String format = e.getFormat();
 
         if (player.hasPermission("wolfessentials.chatfilter.check")) {
-            if (message.contains("Shit")) {
+            if (message.toLowercase().contains("shit")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("shit")) {
+            } else if (message.toLowercase().contains("fuck")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("SHIT")) {
+            } else if (message.toLowercase().contains("bitch")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("fuck")) {
+            } else if (message.toLowercase().contains("cunt")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("Fuck")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("FUCK")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("Bitch")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("bitch")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("BITCH")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("Cunt")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("cunt")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("CUNT")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.contains("lag")) {
+            } else if (message.toLowercase().contains("lag")) {
                 e.setMessage("I LOVE WOLFPRISON!!!");
             }
         }
