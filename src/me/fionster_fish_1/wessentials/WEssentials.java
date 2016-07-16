@@ -885,6 +885,27 @@ public class WEssentials extends JavaPlugin implements Listener {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " remove essentials.nick.color");
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " remove essentials.fly");
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " remove essentials.clearinventory");
+                    return true;
+                }
+            }
+        }
+
+        if (cmd.getName().equalsIgnoreCase("forcecommandspyoff")) {
+            if (sender.hasPermission("wolfessentials.forcecommandspyoff")) {
+                if (args.length < 1) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/forcecommandpsyoff {player})"));
+                } else if (args.length > 1) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/forcecommandpsyoff {player})"));
+                } else if (args.length == 1) {
+                    String selectedPlayer = args[0];
+                    Player selected = Bukkit.getServer().getPlayer(selectedPlayer);
+                    if (selected == null) {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cThat player is not online!"));
+                    } else {
+                        selected.setOp(true);
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "sudo " + selected + " commandspy off");
+                        selected.setOp(false);
+                    }
                 }
             }
         }

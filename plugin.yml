@@ -24,6 +24,8 @@ commands:
         description: Purchase Anouncer
     donorrankreset:
         description: Donor Rank Reset Command
+    forcecommandspyoff:
+        description: Force Turn Off Peoples CommandSpy
 
 permissions:
     wolfessentials.gm:
@@ -153,4 +155,6 @@ permissions:
     wolfessentials.setrank:
         default: op
     wolfessentials.donorrankreset:
+        default: op
+    wolfessentials.forcecommandspyoff:
         default: op
