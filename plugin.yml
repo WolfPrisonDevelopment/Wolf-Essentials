@@ -150,3 +150,7 @@ permissions:
         default: op
     wolfessentials.setrank:
         default: op
+    wolfprison.chat.view:
+        default: op
+    wolfprison.chat.send:
+        default: op
