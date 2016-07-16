@@ -880,19 +880,19 @@ public class WEssentials extends JavaPlugin implements Listener {
         String format = e.getFormat();
 
         if (player.hasPermission("wolfessentials.chatfilter.check")) {
-            if (message.toLowercase().contains("shit")) {
+            if (message.toLowerCase().contains("shit")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.toLowercase().contains("fuck")) {
+            } else if (message.toLowerCase().contains("fuck")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.toLowercase().contains("bitch")) {
+            } else if (message.toLowerCase().contains("bitch")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.toLowercase().contains("cunt")) {
+            } else if (message.toLowerCase().contains("cunt")) {
                 e.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.toLowercase().contains("lag")) {
+            } else if (message.toLowerCase().contains("lag")) {
                 e.setMessage("I LOVE WOLFPRISON!!!");
             }
         }
