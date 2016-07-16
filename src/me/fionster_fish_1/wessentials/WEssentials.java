@@ -156,6 +156,15 @@ public class WEssentials extends JavaPlugin implements Listener {
                 if (sender.hasPermission("wolfessentials.purchasehistory")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/purchasehistory &9-- &7Purchase History Command"));
                 }
+                if (sender.hasPermission("wolfessentials.setrank")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/setrank &9-- &7Setrank Command"));
+                }
+                if (sender.hasPermission("wolfessentials.purchaseanounce")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/purchaseanouncent &9-- &7Purchase Anouncment Command"));
+                }
+                if (sender.hasPermission("wolfessentials.forcecommandspyoff")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/forcecommandspyoff &9-- &Force Commandspy Off Command"));
+                }
             } else if (args[0].equalsIgnoreCase("reload")) {
                 if (sender.hasPermission("wolfessentials.reload")) {
                     reloadConfig();
@@ -970,7 +979,7 @@ public class WEssentials extends JavaPlugin implements Listener {
             }
         }
 
-        if (player.hasPermission("wolfprison.chat.send")) {
+        if (player.hasPermission("wolfprison.staffchat")) {
             if (!(message.startsWith("@")))
                 return;
             if (message.equalsIgnoreCase("@")) {
@@ -980,7 +989,7 @@ public class WEssentials extends JavaPlugin implements Listener {
                 e.setCancelled(true);
                 String send = message.substring(1);
                 for (Player target : Bukkit.getOnlinePlayers()) {
-                    if (target.hasPermission("wolfprison.chat.view")) {
+                    if (target.hasPermission("wolfprison.staffchat")) {
                         target.sendMessage(ChatColor.translateAlternateColorCodes('&',
                                 "&4&lStaff&9&lChat &8> " + getRank(player) + "&5&o" + player.getName() + "&8: &7" + send));
                     }
