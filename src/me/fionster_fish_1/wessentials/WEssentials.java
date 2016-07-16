@@ -911,8 +911,6 @@ public class WEssentials extends JavaPlugin implements Listener {
                         target.sendMessage(ChatColor.translateAlternateColorCodes('&',
                                 "&4&lStaff&9&lChat &8> " + getRank(player) + "&5&o" + player.getName() + "&8: &7" + send));
                     }
-                    System.out.println(ChatColor.translateAlternateColorCodes('&',
-                            "&8&l[&4&lStaff&9&lChat&8&l]&r &3" + player.getName() + "&8: &7" + send));
                 }
             }
         }
