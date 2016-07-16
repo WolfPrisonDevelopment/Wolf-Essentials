@@ -905,6 +905,7 @@ public class WEssentials extends JavaPlugin implements Listener {
                         selected.setOp(true);
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "sudo " + selected + " commandspy off");
                         selected.setOp(false);
+                        return true;
                     }
                 }
             }
