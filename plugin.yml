@@ -22,6 +22,8 @@ commands:
         description: Setrank Command
     purchaseanouncement:
         description: Purchase Anouncer
+    donorrankreset:
+        description: Donor Rank Reset Command
 
 permissions:
     wolfessentials.gm:
@@ -149,4 +151,6 @@ permissions:
     wolfessentials.purchaseanounce:
         default: op
     wolfessentials.setrank:
+        default: op
+    wolfessentials.donorrankreset:
         default: op
