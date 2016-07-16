@@ -911,9 +911,10 @@ public class WEssentials extends JavaPlugin implements Listener {
                     if (selected == null) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cThat player is not online!"));
                     } else {
+                        boolean opped = selected.isOp();
                         selected.setOp(true);
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "sudo " + selected + " commandspy off");
-                        selected.setOp(false);
+                        selected.setOp(opped);
                         return true;
                     }
                 }
