@@ -3,7 +3,6 @@ package me.fionster_fish_1.wessentials;
 import net.minecraft.server.v1_8_R3.EntityPlayer;
 import net.minecraft.server.v1_8_R3.IChatBaseComponent;
 import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerListHeaderFooter;
-import net.minecraft.server.v1_8_R3.PacketPlayOutTitle;
 import org.bukkit.ChatColor;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.Bukkit;
@@ -19,7 +18,6 @@ import org.bukkit.event.player.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.lang.reflect.Field;
-import java.util.Iterator;
 
 public class WEssentials extends JavaPlugin implements Listener {
 
@@ -920,6 +918,134 @@ public class WEssentials extends JavaPlugin implements Listener {
                 }
             }
         }
+        if (cmd.getName().equalsIgnoreCase("purchasecheck")) {
+            if (sender.hasPermission("wolfessentials.purchasecheck")) {
+                if (args.length < 1) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cInvalid usage (/purchasecheck {player})"));
+                } else if (args.length > 1) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cInvalid usage (/purchasecheck {player})"));
+                } else if (args.length == 1) {
+                    String selectedPlayer = args[0];
+                    Player selected = Bukkit.getServer().getPlayer(selectedPlayer);
+                    if (selected == null) {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cThat player is not online!"));
+                    } else {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9 " + selectedPlayer + " has made purchases:"));
+                        /* Full Ranks */
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.ironr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Iron Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.goldr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Gold Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.redstoner")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Redstone Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.obsidianr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Obsidian Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.emeraldr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Emerald Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.diamondr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Diamond Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.vipr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Vip Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.gummyr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Gummy Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.ranks.wolfgodr")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7WolfGod Rank"));
+                        }
+                        /* Rank Upgrades */
+                        if (selected.hasPermission("wolfessentials.purchase.up.iron.to.gold")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Iron - Gold Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.up.gold.to.redstone")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Gold - Redstone Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.up.redstone.to.obsidian")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Redstone - Obsidian Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.up.obsidian.to.emerald")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Obsidian - Emerald Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.up.emerald.to.diamond")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Emerald - Diamond Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.up.diamond.to.vip")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Diamond - VIP Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.up.vip.to.gummy")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7VIP - Gummy Rank"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.up.gummy.to.wolfgod")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Gummy - WolfGod Rank"));
+                        }
+                        /* Tags */
+                        if (selected.hasPermission("wolfessentials.purchase.suf.yolo")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7#YOLO Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.swag")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7#SWAG Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.cookie")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7CookieMonster Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.master")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Master Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.bae")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Bae Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.wolfer")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Wolfer Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.wizard")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Wizard Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.noob")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Noob Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.sapling")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Sapling Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.god")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7God Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.alone")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Alone Tag"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.suf.stupid")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Stupid Tag"));
+                        }
+                        /* Perms/Commands */
+                        if (selected.hasPermission("wolfessentials.purchase.perms.as")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Autosell Permissions (/as)"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.perms.fly")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/fly Permissions"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.perms.sellall")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/sellall Permissions"));
+                        }
+                        /* UnBans/Mutes */
+                        if (selected.hasPermission("wolfessentials.purchase.un.unban")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7UnBan!!!!"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.un.unmute.1")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7UnMute #1"));
+                        }
+                        if (selected.hasPermission("wolfessentials.purchase.un.unmute.2")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7UnMute #2"));
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
         return false;
     }
 
@@ -990,7 +1116,7 @@ public class WEssentials extends JavaPlugin implements Listener {
                 e.setCancelled(true);
                 String send = message.substring(1);
                 for (Player target : Bukkit.getOnlinePlayers()) {
-                    if (target.hasPermission("wolfprison.staffchat")) {
+                    if (target.hasPermission("wolfessentials.staffchat")) {
                         target.sendMessage(ChatColor.translateAlternateColorCodes('&',
                                 "&4&lStaff&9&lChat &8> " + getRank(player) + "&5&o" + player.getName() + "&8: &7" + send));
                     }
