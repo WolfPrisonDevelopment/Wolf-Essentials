@@ -2,9 +2,7 @@ package me.fionster_fish_1.wessentials;
 
 import net.minecraft.server.v1_8_R3.EntityPlayer;
 import net.minecraft.server.v1_8_R3.IChatBaseComponent;
-import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerListHeaderFooter;
-import net.minecraft.server.v1_8_R3.PacketPlayOutTitle;
-import org.bukkit.ChatColor;
+import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerListHeaderFooter;import org.bukkit.ChatColor;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -19,7 +17,6 @@ import org.bukkit.event.player.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.lang.reflect.Field;
-import java.util.Iterator;
 
 public class WEssentials extends JavaPlugin implements Listener {
 
