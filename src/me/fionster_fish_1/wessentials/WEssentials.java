@@ -932,6 +932,7 @@ public class WEssentials extends JavaPlugin implements Listener {
                     if (selected == null) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cThat player is not online!"));
                     } else {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9 " + selectedPlayer + " has made purchases:"));
                         /* Full Ranks */
                         if (selected.hasPermission("wolfessentials.purchase.ranks.ironr")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Iron Rank"));
@@ -1117,7 +1118,7 @@ public class WEssentials extends JavaPlugin implements Listener {
                 e.setCancelled(true);
                 String send = message.substring(1);
                 for (Player target : Bukkit.getOnlinePlayers()) {
-                    if (target.hasPermission("wolfprison.staffchat")) {
+                    if (target.hasPermission("wolfessentials.staffchat")) {
                         target.sendMessage(ChatColor.translateAlternateColorCodes('&',
                                 "&4&lStaff&9&lChat &8> " + getRank(player) + "&5&o" + player.getName() + "&8: &7" + send));
                     }

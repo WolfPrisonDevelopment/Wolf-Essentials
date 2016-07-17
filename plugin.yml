@@ -26,6 +26,8 @@ commands:
         description: Donor Rank Reset Command
     forcecommandspyoff:
         description: Force Turn Off Peoples CommandSpy
+    purchasecheck:
+        description: Like /purchasehistory only for admins to check others!
 
 permissions:
     wolfessentials.gm:
@@ -160,5 +162,7 @@ permissions:
         default: op
     wolfessentials.donorrankreset:
         default: op
-    wolfprison.staffchat:
+    wolfessentials.staffchat:
+        default: op
+    wolfessentials.purchasecheck:
         default: op
