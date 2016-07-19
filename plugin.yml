@@ -28,6 +28,8 @@ commands:
         description: Force Turn Off Peoples CommandSpy
     purchasecheck:
         description: Like /purchasehistory only for admins to check others!
+    wsuicide:
+        description: WolfEssentials suicide command.
 
 permissions:
     wolfessentials.gm:
