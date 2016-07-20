@@ -11,7 +11,7 @@ public class donorrankreset implements CommandExecutor {
 
     public static WEssentials plugin;
     public donorrankreset(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

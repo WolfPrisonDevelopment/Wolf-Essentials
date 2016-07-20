@@ -11,7 +11,7 @@ public class twitchstream implements CommandExecutor {
 
     public static WEssentials plugin;
     public twitchstream(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

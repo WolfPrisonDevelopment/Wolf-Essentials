@@ -11,7 +11,7 @@ public class ytrec implements CommandExecutor {
 
     public static WEssentials plugin;
     public ytrec(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

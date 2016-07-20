@@ -12,7 +12,7 @@ public class forcecommandspyoff implements CommandExecutor {
 
     public static WEssentials plugin;
     public forcecommandspyoff(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

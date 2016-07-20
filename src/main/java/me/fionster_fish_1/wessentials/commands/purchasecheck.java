@@ -12,7 +12,7 @@ public class purchasecheck implements CommandExecutor {
 
     public static WEssentials plugin;
     public purchasecheck(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

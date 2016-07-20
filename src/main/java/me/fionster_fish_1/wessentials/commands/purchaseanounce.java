@@ -12,7 +12,7 @@ public class purchaseanounce implements CommandExecutor {
 
     public static WEssentials plugin;
     public purchaseanounce(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

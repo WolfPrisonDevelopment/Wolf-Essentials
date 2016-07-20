@@ -10,7 +10,7 @@ public class purchasehistory implements CommandExecutor {
 
     public static WEssentials plugin;
     public purchasehistory(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

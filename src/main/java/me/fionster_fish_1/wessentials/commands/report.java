@@ -12,7 +12,7 @@ public class report implements CommandExecutor {
 
     public static WEssentials plugin;
     public report(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

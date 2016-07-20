@@ -11,7 +11,7 @@ public class setrank implements CommandExecutor {
 
     public static WEssentials plugin;
     public setrank(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

@@ -12,7 +12,7 @@ public class wgm implements CommandExecutor {
 
     public static WEssentials plugin;
     public wgm(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package me.fionster_fish_1.wessentials.commands;
 
 import me.fionster_fish_1.wessentials.WEssentials;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,7 +11,7 @@ public class wolfessentials implements CommandExecutor {
 
     public static WEssentials plugin;
     public wolfessentials(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override

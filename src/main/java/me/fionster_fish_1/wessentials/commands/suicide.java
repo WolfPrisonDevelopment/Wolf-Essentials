@@ -11,7 +11,7 @@ public class suicide implements CommandExecutor {
     public static WEssentials plugin;
 
     public suicide(WEssentials instance) {
-        instance = plugin;
+        plugin = instance;
     }
 
     @Override
