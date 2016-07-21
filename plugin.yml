@@ -142,6 +142,8 @@ permissions:
         default: false
     wolfessentials.rank.co:
         default: false
+    wolfessentials.rank.jrdev:
+        default: false
     wolfessentials.rank.dev:
         default: false
     wolfessentials.rank.manager:

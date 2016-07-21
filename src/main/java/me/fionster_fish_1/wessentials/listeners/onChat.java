@@ -43,7 +43,7 @@ public class onChat implements Listener {
             }
         }
 
-        if (player.hasPermission("wolfprison.staffchat")) {
+        if (player.hasPermission("wolfessentials.staffchat")) {
             if (!(message.startsWith("@")))
                 return;
             if (message.equalsIgnoreCase("@")) {
@@ -76,6 +76,8 @@ public class onChat implements Listener {
             return "&8&l[&3&lBuilder&8&l] ";
         if (p.hasPermission(wolfEssentials + "co"))
             return "&8&l[&4&lCo-Owner&8&l] ";
+        if (p.hasPermission(wolfEssentials + "jrdev"))
+            return "&8&l[&9&lJr.Dev&8&l] ";
         if (p.hasPermission(wolfEssentials + "dev"))
             return "&8&l[&4&lDev&8&l] ";
         if (p.hasPermission(wolfEssentials + "manager"))

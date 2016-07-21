@@ -58,6 +58,9 @@ public class rankperms implements CommandExecutor {
                     if (sender.hasPermission("wolfessentials.rank.co")) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cCo-Owner"));
                     }
+                    if (sender.hasPermission("wolfessentials.rank.jrdev")) {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cJr. Dev"));
+                    }
                     if (sender.hasPermission("wolfessentials.rank.dev")) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cDeveloper"));
                     }
@@ -260,6 +263,17 @@ public class rankperms implements CommandExecutor {
                         sender.sendMessage(ChatColor.GRAY + "/broadcast (/bc)");
                         sender.sendMessage(ChatColor.GRAY + "/afk");
                         sender.sendMessage(ChatColor.GRAY + "/god");
+                    }
+                } else if (args[0].equalsIgnoreCase("jrdev")) {
+                    if (sender.hasPermission("wolfessentials.rank.jrdev")) {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For &cJrDev&9:"));
+                        sender.sendMessage(ChatColor.GRAY + "/fly");
+                        sender.sendMessage(ChatColor.GRAY + "/back");
+                        sender.sendMessage(ChatColor.GRAY + "/heal and /feed");
+                        sender.sendMessage(ChatColor.GRAY + "/tp and /tpo");
+                        sender.sendMessage(ChatColor.GRAY + "/nick");
+                        sender.sendMessage(ChatColor.GRAY + "/broadcast");
+                        sender.sendMessage(ChatColor.GRAY + "/kick and /warn");
                     }
                 } else if (args[0].equalsIgnoreCase("developer")) {
                     if (sender.hasPermission("wolfessentials.rank.dev")) {
