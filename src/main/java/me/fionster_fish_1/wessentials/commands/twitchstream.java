@@ -31,6 +31,8 @@ public class twitchstream implements CommandExecutor {
                     sender.sendMessage(ChatColor.RED + "Successfully Ended");
                     return true;
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
             }
         }
         return false;

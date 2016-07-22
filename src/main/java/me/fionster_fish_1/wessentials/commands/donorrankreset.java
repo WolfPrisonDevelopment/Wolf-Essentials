@@ -65,6 +65,8 @@ public class donorrankreset implements CommandExecutor {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " remove essentials.clearinventory");
                     return true;
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
             }
         }
         return false;

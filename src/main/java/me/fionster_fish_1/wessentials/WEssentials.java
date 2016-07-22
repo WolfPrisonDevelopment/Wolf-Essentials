@@ -48,6 +48,7 @@ public class WEssentials extends JavaPlugin {
         getCommand("wolfessentials").setExecutor(new wolfessentials(this));
         getCommand("ytrec").setExecutor(new ytrec(this));
         getCommand("wsuicide").setExecutor(new suicide(this));
+        getCommand("forcecommandspyon").setExecutor(new forcecommandspyoff(this));
         saveDefaultConfig();
     }
 }

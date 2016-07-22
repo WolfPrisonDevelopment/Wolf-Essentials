@@ -30,6 +30,8 @@ commands:
         description: Like /purchasehistory only for admins to check others!
     wsuicide:
         description: WolfEssentials suicide command.
+    forcecommandspyon:
+        description: Force Turn On Peoples Commandspy
 
 permissions:
     wolfessentials.gm:
@@ -169,4 +171,6 @@ permissions:
     wolfessentials.staffchat:
         default: op
     wolfessentials.purchasecheck:
+        default: op
+    wolfessentials.forcecommandspyon:
         default: op

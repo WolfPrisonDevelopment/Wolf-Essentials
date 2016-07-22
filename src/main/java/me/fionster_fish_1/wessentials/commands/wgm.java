@@ -66,6 +66,8 @@ public class wgm implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Spectator"));
                     return true;
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
             }
         }
         return false;

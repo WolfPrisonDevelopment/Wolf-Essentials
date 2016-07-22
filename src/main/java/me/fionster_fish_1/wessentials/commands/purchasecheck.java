@@ -143,6 +143,8 @@ public class purchasecheck implements CommandExecutor {
                         }
                     }
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
             }
         }
         return false;

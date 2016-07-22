@@ -34,6 +34,8 @@ public class purchaseanounce implements CommandExecutor {
                     selected.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lDonation&9&lMessager &8> &7Hey there, " + donatorName + "&7! Thank you for purchasing" + donatedItem + ". You have contributed towards the development of the server and general funding! Thank you for your generosity, -The WolfPrison Team :D"));
                     return true;
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
             }
         }
         return false;

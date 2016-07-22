@@ -313,6 +313,8 @@ public class rankperms implements CommandExecutor {
                         return true;
                     }
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
             }
         }
         return false;

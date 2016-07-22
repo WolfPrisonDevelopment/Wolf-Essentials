@@ -128,6 +128,8 @@ public class purchasehistory implements CommandExecutor {
                 if (sender.hasPermission("wolfessentials.purchase.un.unmute.2")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7UnMute #2"));
                 }
+            } else {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
             }
         }
         return false;

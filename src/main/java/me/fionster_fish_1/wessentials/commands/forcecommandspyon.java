@@ -8,21 +8,21 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class forcecommandspyoff implements CommandExecutor {
+public class forcecommandspyon implements CommandExecutor {
 
     public static WEssentials plugin;
-    public forcecommandspyoff(WEssentials instance) {
+    public forcecommandspyon(WEssentials instance) {
         plugin = instance;
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("forcecommandspyoff")) {
-            if (sender.hasPermission("wolfessentials.forcecommandspyoff")) {
+        if (cmd.getName().equalsIgnoreCase("forcecommandspyon")) {
+            if (sender.hasPermission("wolfessentials.forcecommandspyon")) {
                 if (args.length < 1) {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/forcecommandpsyoff {player})"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/forcecommandpsyon {player})"));
                 } else if (args.length > 1) {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/forcecommandpsyoff {player})"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/forcecommandpsyon {player})"));
                 } else if (args.length == 1) {
                     String selectedPlayer = args[0];
                     Player selected = Bukkit.getServer().getPlayer(selectedPlayer);
@@ -31,7 +31,7 @@ public class forcecommandspyoff implements CommandExecutor {
                     } else {
                         boolean opped = selected.isOp();
                         selected.setOp(true);
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "sudo " + selected + " commandspy off");
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "sudo " + selected + " commandspy on");
                         selected.setOp(opped);
                         return true;
                     }
