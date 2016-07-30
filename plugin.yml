@@ -6,6 +6,15 @@ author: fionster_fish_1
 commands:
     wgm:
         description: Wolf Essentials GameMode Command
+        aliases: [wgamemode, wolfgamemode]
+    wgms:
+        description: Part of wgm
+    wgmc:
+        description: Part of wgm
+    wgma:
+        description: Part of wgm
+    wgmsp:
+        description: Part of wgm
     ytrec:
         description: Wolf Essentials Yt Record Command
     twitchstream:
