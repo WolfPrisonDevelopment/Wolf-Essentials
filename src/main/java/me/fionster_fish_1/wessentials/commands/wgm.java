@@ -22,74 +22,37 @@ public class wgm implements CommandExecutor {
         if (cmd.getName().equalsIgnoreCase("wgm")) {
             if (sender.hasPermission("wolfessentials.gm")) {
                 if (args.length <= 0) {
-                    sender.sendMessage(ChatColor.RED + "Please Enter A Valid Arguement");
-                    sender.sendMessage(ChatColor.RED + "Valid Arguements");
-                    sender.sendMessage(ChatColor.RED + "0 1 2 3");
-                    sender.sendMessage(ChatColor.RED + "Survival Creative Adventure Spectator");
-                    sender.sendMessage(ChatColor.RED + "To set someone elses gamemode please use:");
-                    sender.sendMessage(ChatColor.RED + "/wgm (mode) (player)");
-                } else if (args[0].equalsIgnoreCase("0")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.SURVIVAL);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to survival."));
-                } else if (args[0].equalsIgnoreCase("1")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.CREATIVE);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to creative."));
-                } else if (args[0].equalsIgnoreCase("2")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.ADVENTURE);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to adventure."));
-                } else if (args[0].equalsIgnoreCase("3")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.SPECTATOR);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to spectator."));
-                } else if (args[0].equalsIgnoreCase("survival")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.SURVIVAL);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to survival."));
-                } else if (args[0].equalsIgnoreCase("creative")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.CREATIVE);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to creative."));
-                } else if (args[0].equalsIgnoreCase("adventure")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.ADVENTURE);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to adventure."));
-                } else if (args[0].equalsIgnoreCase("spectator")) {
-                    Player player = (Player) sender;
-                    player.setGameMode(GameMode.SPECTATOR);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to spectator."));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/wgm {mode} {player})"));
                 } else if (args.length >= 3) {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/wgm {player) {mode})"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/wgm {mode    ) {player})"));
                 } else if (args.length == 2) {
                     String player = args[1];
                     Player selectedPlayer = Bukkit.getServer().getPlayer(player);
                     if (selectedPlayer == null) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cThat player is not online!"));
                     } else {
-                        if (args[1].equalsIgnoreCase("0")) {
+                        if (args[0].equalsIgnoreCase("0")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to survival"));
                             selectedPlayer.setGameMode(GameMode.SURVIVAL);
-                        } else if (args[1].equalsIgnoreCase("1")) {
+                        } else if (args[0].equalsIgnoreCase("1")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to creative"));
                             selectedPlayer.setGameMode(GameMode.CREATIVE);
-                        } else if (args[1].equalsIgnoreCase("2")) {
+                        } else if (args[0].equalsIgnoreCase("2")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to adventure"));
                             selectedPlayer.setGameMode(GameMode.ADVENTURE);
-                        } else if (args[1].equalsIgnoreCase("3")) {
+                        } else if (args[0].equalsIgnoreCase("3")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to survival"));
                             selectedPlayer.setGameMode(GameMode.SPECTATOR);
-                        } else if (args[1].equalsIgnoreCase("survival")) {
+                        } else if (args[0].equalsIgnoreCase("survival")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to survival"));
                             selectedPlayer.setGameMode(GameMode.SURVIVAL);
-                        } else if (args[1].equalsIgnoreCase("creative")) {
+                        } else if (args[0].equalsIgnoreCase("creative")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to creative"));
                             selectedPlayer.setGameMode(GameMode.CREATIVE);
-                        } else if (args[1].equalsIgnoreCase("adventure")) {
+                        } else if (args[0].equalsIgnoreCase("adventure")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to adventure"));
                             selectedPlayer.setGameMode(GameMode.ADVENTURE);
-                        } else if (args[1].equalsIgnoreCase("spectator")) {
+                        } else if (args[0].equalsIgnoreCase("spectator")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Set &c" + player + "&7\'s gamemode to spectator"));
                             selectedPlayer.setGameMode(GameMode.SPECTATOR);
                         }
