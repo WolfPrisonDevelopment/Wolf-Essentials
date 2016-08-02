@@ -18,6 +18,7 @@ public class WEssentials extends JavaPlugin {
     @Override
     public void onEnable() {
         getProcess();
+        instialiseGamemodeCMDs();
         getLogger().info("Wolf Essentials Enabled");
     }
 
@@ -44,11 +45,18 @@ public class WEssentials extends JavaPlugin {
         getCommand("report").setExecutor(new report(this));
         getCommand("setrank").setExecutor(new setrank(this));
         getCommand("twitchstream").setExecutor(new twitchstream(this));
-        getCommand("wgm").setExecutor(new wgm(this));
         getCommand("wolfessentials").setExecutor(new wolfessentials(this));
         getCommand("ytrec").setExecutor(new ytrec(this));
         getCommand("wsuicide").setExecutor(new suicide(this));
         getCommand("forcecommandspyon").setExecutor(new forcecommandspyoff(this));
         saveDefaultConfig();
+    }
+
+    public void instialiseGamemodeCMDs() {
+        getCommand("wgm").setExecutor(new wgm(this));
+        getCommand("wgms").setExecutor(new wgm(this));
+        getCommand("wgmc").setExecutor(new wgm(this));
+        getCommand("wgma").setExecutor(new wgm(this));
+        getCommand("wgmsp").setExecutor(new wgm(this));
     }
 }
