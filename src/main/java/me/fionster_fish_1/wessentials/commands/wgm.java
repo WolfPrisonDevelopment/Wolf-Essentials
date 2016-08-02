@@ -31,43 +31,35 @@ public class wgm implements CommandExecutor {
                 } else if (args[0].equalsIgnoreCase("0")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.SURVIVAL);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Survival"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to survival."));
                 } else if (args[0].equalsIgnoreCase("1")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.CREATIVE);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Creative"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to creative."));
                 } else if (args[0].equalsIgnoreCase("2")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.ADVENTURE);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Adventure"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to adventure."));
                 } else if (args[0].equalsIgnoreCase("3")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.SPECTATOR);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Spectator"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to spectator."));
                 } else if (args[0].equalsIgnoreCase("survival")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.SURVIVAL);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Survival"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to survival."));
                 } else if (args[0].equalsIgnoreCase("creative")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.CREATIVE);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Creative"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to creative."));
                 } else if (args[0].equalsIgnoreCase("adventure")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.ADVENTURE);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Adventure"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to adventure."));
                 } else if (args[0].equalsIgnoreCase("spectator")) {
                     Player player = (Player) sender;
                     player.setGameMode(GameMode.SPECTATOR);
-                    String name = sender.getName();
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Set Gamemode For &4" + name + " &9Spectator"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Self-set gamemode to spectator."));
                 } else if (args.length >= 3) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cPlease use the correct syntax (/wgm {player) {mode})"));
                 } else if (args.length == 2) {
