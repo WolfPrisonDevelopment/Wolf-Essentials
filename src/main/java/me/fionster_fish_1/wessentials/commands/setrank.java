@@ -31,7 +31,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Iron");
@@ -52,8 +51,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.color");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Gold");
@@ -71,7 +68,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.format");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
@@ -79,8 +75,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add esssentials.warps.redstone");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.color");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Redstone");
@@ -98,7 +92,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.format");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
@@ -110,8 +103,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.color");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Obsidian");
@@ -129,7 +120,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.format");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
@@ -145,8 +135,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.color");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Emerald");
@@ -164,7 +152,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.format");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
@@ -184,8 +171,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.decor");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.color");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Diamond");
@@ -203,7 +188,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.format");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
@@ -227,8 +211,6 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.decor");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick.color");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " VIP");
