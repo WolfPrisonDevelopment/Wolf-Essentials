@@ -41,6 +41,8 @@ commands:
         description: WolfEssentials suicide command.
     forcecommandspyon:
         description: Force Turn On Peoples Commandspy
+    craterewards:
+        description: /Craterewards
 
 permissions:
     wolfessentials.gm:
@@ -183,3 +185,5 @@ permissions:
         default: op
     wolfessentials.forcecommandspyon:
         default: op
+    wolfessentials.craterewards:
+        default: true
