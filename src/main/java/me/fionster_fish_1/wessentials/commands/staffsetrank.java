@@ -9,18 +9,18 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.conversations.StringPrompt;
 import org.bukkit.entity.Player;
 
-public class promote implements CommandExecutor {
+public class staffsetrank implements CommandExecutor {
 
     public WEssentials plugin;
 
-    public promote(WEssentials instance) {
+    public staffsetrank(WEssentials instance) {
         plugin = instance;
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("promote")) {
-            if (sender.hasPermission("wolfessentials.promote")) {
+        if (cmd.getName().equalsIgnoreCase("staffsetrank")) {
+            if (sender.hasPermission("wolfessentials.staffsetrank")) {
                 if (args.length == 3) {
                     String IGN = args[0];
                     String StaffRank = args[1];
@@ -29,12 +29,11 @@ public class promote implements CommandExecutor {
                     if (selectedplayer == null) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', playernotfound()));
                     } else {
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + selectedplayer + "group set " + StaffRank);
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + selectedplayer + "group add " + Rankup);
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + IGN + " group set " + StaffRank);
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + IGN + " group add " + Rankup);
                     }
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', syntaxerror()));
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cTo view valid staffranks use /promote ranks"));
                 }
             }
         }
@@ -42,7 +41,7 @@ public class promote implements CommandExecutor {
     }
 
     private String syntaxerror() {
-        return "&4&lERROR&8: &cPlease use the correct syntax (/promote {user} {Desired Staff Rank} {Rankup}";
+        return "&4&lERROR&8: &cPlease use the correct syntax (/staffsetrank {user} {Desired Staff Rank} {Rankup}";
     }
 
     private String playernotfound() {
