@@ -50,7 +50,7 @@ public class WEssentials extends JavaPlugin {
         getCommand("wsuicide").setExecutor(new suicide(this));
         getCommand("forcecommandspyon").setExecutor(new forcecommandspyoff(this));
         getCommand("craterewards").setExecutor(new craterewards(this));
-        //getCommand("promote").setExecutor(new promote(this));
+        getCommand("staffsetrank").setExecutor(new staffsetrank(this));
         saveDefaultConfig();
     }
 

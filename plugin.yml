@@ -43,6 +43,8 @@ commands:
         description: Force Turn On Peoples Commandspy
     craterewards:
         description: /Craterewards
+    staffsetrank:
+        description: Set a players staff rank.
 
 permissions:
     wolfessentials.gm:
@@ -187,3 +189,5 @@ permissions:
         default: op
     wolfessentials.craterewards:
         default: true
+    wolfessentials.staffsetrank:
+        default: op
