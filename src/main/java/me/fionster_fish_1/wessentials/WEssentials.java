@@ -49,6 +49,8 @@ public class WEssentials extends JavaPlugin {
         getCommand("ytrec").setExecutor(new ytrec(this));
         getCommand("wsuicide").setExecutor(new suicide(this));
         getCommand("forcecommandspyon").setExecutor(new forcecommandspyoff(this));
+        getCommand("craterewards").setExecutor(new craterewards(this));
+        //getCommand("promote").setExecutor(new promote(this));
         saveDefaultConfig();
     }
 
