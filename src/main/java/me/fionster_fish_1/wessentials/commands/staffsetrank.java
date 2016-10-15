@@ -6,8 +6,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.conversations.StringPrompt;
-import org.bukkit.entity.Player;
 
 public class staffsetrank implements CommandExecutor {
 
@@ -25,16 +23,15 @@ public class staffsetrank implements CommandExecutor {
                     String IGN = args[0];
                     String StaffRank = args[1];
                     String Rankup = args[2];
-                    Player selectedplayer = Bukkit.getServer().getPlayer(IGN);
-                    if (selectedplayer == null) {
-                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', playernotfound()));
-                    } else {
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + IGN + " group set " + StaffRank);
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + IGN + " group add " + Rankup);
-                    }
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + IGN + " group set " + StaffRank);
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + IGN + " group add " + Rankup);
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lSet&9&lRank &8> &7Successfully set " + IGN + " to " + StaffRank));
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', syntaxerror()));
                 }
+            } else {
+                String noperms = WEssentials.plugin.nopermission();
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms));
             }
         }
         return false;
@@ -42,9 +39,5 @@ public class staffsetrank implements CommandExecutor {
 
     private String syntaxerror() {
         return "&4&lERROR&8: &cPlease use the correct syntax (/staffsetrank {user} {Desired Staff Rank} {Rankup}";
-    }
-
-    private String playernotfound() {
-        return "&4&lERROR&8: &cPlayer not found!";
     }
 }

@@ -20,6 +20,7 @@ public class WEssentials extends JavaPlugin {
         getProcess();
         instialiseGamemodeCMDs();
         getLogger().info("Wolf Essentials Enabled");
+        WEssentials.plugin = this;
     }
 
     @Override
@@ -60,5 +61,9 @@ public class WEssentials extends JavaPlugin {
         getCommand("wgmc").setExecutor(new wgm(this));
         getCommand("wgma").setExecutor(new wgm(this));
         getCommand("wgmsp").setExecutor(new wgm(this));
+    }
+
+    public String nopermission() {
+        return "&4&lERROR&8: &cNo Permission";
     }
 }
