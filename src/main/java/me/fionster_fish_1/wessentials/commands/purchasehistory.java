@@ -129,7 +129,8 @@ public class purchasehistory implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7UnMute #2"));
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                String noperms = WEssentials.plugin.nopermission();
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms));
             }
         }
         return false;

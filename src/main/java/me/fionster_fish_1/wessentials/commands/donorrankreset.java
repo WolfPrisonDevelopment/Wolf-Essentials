@@ -66,7 +66,8 @@ public class donorrankreset implements CommandExecutor {
                     return true;
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                String noperms = WEssentials.plugin.nopermission();
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms));
             }
         }
         return false;

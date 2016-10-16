@@ -23,22 +23,21 @@ public class onChat implements Listener {
     public void onChat(AsyncPlayerChatEvent e) {
         Player player = e.getPlayer();
         String message = e.getMessage();
-        String format = e.getFormat();
 
         if (player.hasPermission("wolfessentials.chatfilter.check")) {
             if (message.toLowerCase().contains("shit")) {
                 e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
+                player.sendMessage(ChatColor.RED + badlanguage());
             } else if (message.toLowerCase().contains("fuck")) {
                 e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
+                player.sendMessage(ChatColor.RED + badlanguage());
             } else if (message.toLowerCase().contains("bitch")) {
                 e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
+                player.sendMessage(ChatColor.RED + badlanguage());
             } else if (message.toLowerCase().contains("cunt")) {
                 e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "Please Refrain From Using Bad Language");
-            } else if (message.toLowerCase().contains("lag")) {
+                player.sendMessage(ChatColor.RED + badlanguage());
+            } else if (message.equalsIgnoreCase("lag")) {
                 e.setMessage("I LOVE WOLFPRISON!!!");
             }
         }
@@ -85,5 +84,9 @@ public class onChat implements Listener {
         if (p.hasPermission(wolfEssentials + "owner"))
             return "&8&l[&c&lOwner&8&l] ";
         return "";
+    }
+
+    private String badlanguage() {
+        return "Please Refrain From Using Bad Language";
     }
 }

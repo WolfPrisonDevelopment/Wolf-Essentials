@@ -34,9 +34,7 @@ public class wolfessentials implements CommandExecutor {
             } else if (args[0].equalsIgnoreCase("help")) {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9WolfEssentials Help Page:"));
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/wolfessentials &9-- &7WolfEssentials Command"));
-                if (sender.hasPermission("wolfessentials.gm")) {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/wgm &9-- &7WolfEssentials Gamemode Command"));
-                }
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/report &9-- &7Report a player to online staff members."));
                 if (sender.hasPermission("wolfessentials.ytrec")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/ytrec &9-- &7Youtube Recording Command"));
                 }
@@ -56,13 +54,31 @@ public class wolfessentials implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/purchaseanouncent &9-- &7Purchase Anouncment Command"));
                 }
                 if (sender.hasPermission("wolfessentials.forcecommandspyoff")) {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/forcecommandspyoff &9-- &Force Commandspy Off Command"));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/forcecommandspyoff &9-- &7Force Commandspy Off Command"));
+                }
+                if (sender.hasPermission("wolfessentials.craterewards")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/craterewards &9-- &7View the crate rewards"));
+                }
+                if (sender.hasPermission("wolfessentials.staffsetrank")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/staffsetrank &9-- &7Set someones staff rank"));
+                }
+                if (sender.hasPermission("wolfessentials.gm")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/wgm /wgms /wgmc /wgma /wgmsp &9-- &7Gamemode commands"));
+                }
+                if (sender.hasPermission("wolfessentials.purchasecheck")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/purchasecheck &9-- &7Check what purchases a player has made."));
+                }
+                if (sender.hasPermission("wolfessentials.forcecommandspyon")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/forcecommandspyon &9-- &7Force someones commandspy on."));
                 }
             } else if (args[0].equalsIgnoreCase("reload")) {
                 if (sender.hasPermission("wolfessentials.reload")) {
                     plugin.reloadConfig();
                     String rmessage = plugin.getConfig().getString("reloadmessage");
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', rmessage));
+                } else {
+                    String noperms = WEssentials.plugin.nopermission();
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms));
                 }
             }
         }

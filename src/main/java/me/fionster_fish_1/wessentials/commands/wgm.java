@@ -59,7 +59,7 @@ public class wgm implements CommandExecutor {
                     }
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms()));
             }
         }
 
@@ -78,7 +78,7 @@ public class wgm implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Please use the correct syntax (/wgms {player})"));
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms()));
             }
         }
 
@@ -97,7 +97,7 @@ public class wgm implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Please use the correct syntax (/wgmc {player})"));
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms()));
             }
         }
 
@@ -116,7 +116,7 @@ public class wgm implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Please use the correct syntax (/wgma {player})"));
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms()));
             }
         }
 
@@ -135,9 +135,13 @@ public class wgm implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWGM &8> &7Please use the correct syntax (/wgmsp {player})"));
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms()));
             }
         }
         return false;
+    }
+
+    private String noperms() {
+        return WEssentials.plugin.nopermission();
     }
 }

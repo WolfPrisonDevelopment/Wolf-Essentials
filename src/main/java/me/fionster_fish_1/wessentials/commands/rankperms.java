@@ -314,7 +314,8 @@ public class rankperms implements CommandExecutor {
                     }
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR&8: &cNo Permission!"));
+                String noperms = WEssentials.plugin.nopermission();
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noperms));
             }
         }
         return false;
