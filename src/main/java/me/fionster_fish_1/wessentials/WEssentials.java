@@ -11,6 +11,8 @@ import me.fionster_fish_1.wessentials.listeners.PlayerRespawn;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 public class WEssentials extends JavaPlugin {
 
     public static WEssentials plugin;
@@ -18,7 +20,6 @@ public class WEssentials extends JavaPlugin {
     @Override
     public void onEnable() {
         getProcess();
-        instialiseGamemodeCMDs();
         getLogger().info("Wolf Essentials Enabled");
         WEssentials.plugin = this;
     }
@@ -26,9 +27,13 @@ public class WEssentials extends JavaPlugin {
     @Override
     public void onDisable() {
         getLogger().info("Wolf Essentials Disabled");
+        saveConfig();
+        WEssentials.plugin = null;
     }
 
     public void getProcess() {
+        config();
+        instialiseGamemodeCMDs();
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new LeashEvent(this), this);
         pm.registerEvents(new onAwake(this), this);
@@ -52,7 +57,6 @@ public class WEssentials extends JavaPlugin {
         getCommand("forcecommandspyon").setExecutor(new forcecommandspyoff(this));
         getCommand("craterewards").setExecutor(new craterewards(this));
         getCommand("staffsetrank").setExecutor(new staffsetrank(this));
-        saveDefaultConfig();
     }
 
     public void instialiseGamemodeCMDs() {
@@ -61,6 +65,24 @@ public class WEssentials extends JavaPlugin {
         getCommand("wgmc").setExecutor(new wgm(this));
         getCommand("wgma").setExecutor(new wgm(this));
         getCommand("wgmsp").setExecutor(new wgm(this));
+    }
+
+    public void config() {
+        try {
+            if (!getDataFolder().exists()) {
+                getDataFolder().mkdirs();
+            }
+            File file = new File(getDataFolder(), "config.yml");
+            if (!file.exists()) {
+                getLogger().warning("Config.yml not found, creating!");
+                saveDefaultConfig();
+            } else {
+                getLogger().info("Config.yml found, loading!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
     }
 
     public String nopermission() {

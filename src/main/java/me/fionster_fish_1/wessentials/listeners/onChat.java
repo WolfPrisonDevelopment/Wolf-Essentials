@@ -8,12 +8,16 @@ import org.bukkit.event.Listener;
 import me.fionster_fish_1.wessentials.WEssentials;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
+import java.lang.reflect.Array;
+
 public class onChat implements Listener {
 
     int min;
     int max;
     static String upper;
     public static WEssentials plugin;
+
+    String[] badwords = {"Shit", "Fuck", "Cunt", "Nigga", "Negro", "pussy", "bitch", "cock", "dick", "dildo", "penis"};
 
     public onChat(WEssentials instance) {
         plugin = instance;
@@ -25,19 +29,13 @@ public class onChat implements Listener {
         String message = e.getMessage();
 
         if (player.hasPermission("wolfessentials.chatfilter.check")) {
-            if (message.toLowerCase().contains("shit")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + badlanguage());
-            } else if (message.toLowerCase().contains("fuck")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + badlanguage());
-            } else if (message.toLowerCase().contains("bitch")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + badlanguage());
-            } else if (message.toLowerCase().contains("cunt")) {
-                e.setCancelled(true);
-                player.sendMessage(ChatColor.RED + badlanguage());
-            } else if (message.equalsIgnoreCase("lag")) {
+            for (String badword : badwords) {
+                if (message.toLowerCase().contains(badword.toLowerCase())) {
+                    e.setCancelled(true);
+                    player.sendMessage(ChatColor.RED + badlanguage());
+                }
+            }
+            if (message.equalsIgnoreCase("lag")) {
                 e.setMessage("I LOVE WOLFPRISON!!!");
             }
         }

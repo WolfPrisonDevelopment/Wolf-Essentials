@@ -118,7 +118,7 @@ public class purchasehistory implements CommandExecutor {
                 if (sender.hasPermission("wolfessentials.purchase.perms.sellall")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7/sellall Permissions"));
                 }
-                /* UnBans/Mutes */
+                /* Unbans/Mutes */
                 if (sender.hasPermission("wolfessentials.purchase.un.unban")) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7UnBan!!!!"));
                 }
