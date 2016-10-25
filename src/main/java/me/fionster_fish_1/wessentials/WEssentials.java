@@ -84,7 +84,6 @@ public class WEssentials extends JavaPlugin {
 
         }
     }
-
     public String nopermission() {
         return "&4&lERROR&8: &cNo Permission";
     }

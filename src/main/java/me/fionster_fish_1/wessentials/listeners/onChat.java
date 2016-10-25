@@ -9,6 +9,9 @@ import me.fionster_fish_1.wessentials.WEssentials;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class onChat implements Listener {
 
@@ -16,8 +19,6 @@ public class onChat implements Listener {
     int max;
     static String upper;
     public static WEssentials plugin;
-
-    String[] badwords = {"Shit", "Fuck", "Cunt", "Nigga", "Negro", "pussy", "bitch", "cock", "dick", "dildo", "penis"};
 
     public onChat(WEssentials instance) {
         plugin = instance;
@@ -27,14 +28,16 @@ public class onChat implements Listener {
     public void onChat(AsyncPlayerChatEvent e) {
         Player player = e.getPlayer();
         String message = e.getMessage();
+        List<String> blockedwords = plugin.getConfig().getStringList("Blocked Words");
 
         if (player.hasPermission("wolfessentials.chatfilter.check")) {
-            for (String badword : badwords) {
-                if (message.toLowerCase().contains(badword.toLowerCase())) {
+            // Config fetcher courtesy of Corey
+            blockedwords.forEach((blocker) -> {
+                if (message.toLowerCase().contains(blocker.toLowerCase())) {
                     e.setCancelled(true);
-                    player.sendMessage(ChatColor.RED + badlanguage());
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', badlanguage()));
                 }
-            }
+            });
             if (message.equalsIgnoreCase("lag")) {
                 e.setMessage("I LOVE WOLFPRISON!!!");
             }
@@ -85,6 +88,6 @@ public class onChat implements Listener {
     }
 
     private String badlanguage() {
-        return "Please Refrain From Using Bad Language";
+        return "&4&lWolf&9&lPrison &8> &cPlease refrain from using badlanguage! It may result in punishment";
     }
 }
