@@ -45,6 +45,8 @@ commands:
         description: /Craterewards
     staffsetrank:
         description: Set a players staff rank.
+    updates:
+        description: See whats happening.
 
 permissions:
     wolfessentials.gm:
@@ -190,4 +192,6 @@ permissions:
     wolfessentials.craterewards:
         default: true
     wolfessentials.staffsetrank:
+        default: op
+    wolfessentials.updates:
         default: op

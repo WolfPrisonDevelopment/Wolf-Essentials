@@ -57,6 +57,7 @@ public class WEssentials extends JavaPlugin {
         getCommand("forcecommandspyon").setExecutor(new forcecommandspyoff(this));
         getCommand("craterewards").setExecutor(new craterewards(this));
         getCommand("staffsetrank").setExecutor(new staffsetrank(this));
+        getCommand("updates").setExecutor(new updates(this));
     }
 
     public void instialiseGamemodeCMDs() {
