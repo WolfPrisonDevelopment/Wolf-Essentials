@@ -147,6 +147,8 @@ permissions:
         default: false
     wolfessentials.rank.vip:
         default: false
+    wolfessentials.rank.halloween:
+        default: false
     wolfessentials.rank.trainee:
         default: false
     wolfessentials.rank.helper:
@@ -194,4 +196,4 @@ permissions:
     wolfessentials.staffsetrank:
         default: op
     wolfessentials.updates:
-        default: op
+        default: true
