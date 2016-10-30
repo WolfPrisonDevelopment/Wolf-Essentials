@@ -221,7 +221,7 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " VIP");
-                    } else if (args[1].equalsIgnoreCase("Halloween")) {
+                    } else if (args[1].equalsIgnoreCase("Spooky")) {
                         String playerName = args[0];
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
@@ -229,8 +229,7 @@ public class setrank implements CommandExecutor {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.heal");
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add deluxetags.tag.halloween");
-                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWolf&9&lPrison &8> &7Added halloween rank to " + playerName));
-                        sender.sendMessage(ChatColor.GRAY + "Check your permissions with /rankperms");
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add wolfessentials.rank.halloween");
                     }
                 }
             } else {

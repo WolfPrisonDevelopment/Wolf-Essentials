@@ -40,6 +40,9 @@ public class rankperms implements CommandExecutor {
                     if (sender.hasPermission("wolfessentials.rank.vip")) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7VIP"));
                     }
+                    if (sender.hasPermission("wolfessentials.rank.halloween")) {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7Halloween"));
+                    }
                     if (sender.hasPermission("wolfessentials.rank.trainee")) {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cTrainee"));
                     }
@@ -72,210 +75,107 @@ public class rankperms implements CommandExecutor {
                     }
                 } else if (args[0].equalsIgnoreCase("iron")) {
                     if (sender.hasPermission("wolfessentials.rank.iron")) {
+                        String[] iron = {"/kit iron", "2 Plots", "1 Playervault (/pv)", "/sellall iron", "/feed", "/back", "/afk"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For Iron:"));
-                        sender.sendMessage(ChatColor.GRAY + "/kit iron");
-                        sender.sendMessage(ChatColor.GRAY + "2 Plots");
-                        sender.sendMessage(ChatColor.GRAY + "1 PlayerVault (/pv)");
-                        sender.sendMessage(ChatColor.GRAY + "/sellall iron");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
+                        for (String ironperms : iron) {
+                            sender.sendMessage(ChatColor.GRAY + ironperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("gold")) {
                     if (sender.hasPermission("wolfessentials.rank.gold")) {
+                        String[] gold = {"/kit iron", "3 Plots", "2 Playervaults (/pv)", "/sellall gold", "/feed", "/back", "/afk", "/kit gold", "/fly", "/ci"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For Gold:"));
-                        sender.sendMessage(ChatColor.GRAY + "/kit iron");
-                        sender.sendMessage(ChatColor.GRAY + "3 Plots");
-                        sender.sendMessage(ChatColor.GRAY + "2 PlayerVault (/pv)");
-                        sender.sendMessage(ChatColor.GRAY + "/sellall gold");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/kit gold");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
+                        for (String goldperms : gold) {
+                            sender.sendMessage(ChatColor.GRAY + goldperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("redstone")) {
                     if (sender.hasPermission("wolfessentials.rank.redstone")) {
+                        String[] redstone = {"/kit iron", "4 Plots", "3 Playervaults (/pv)", "/sellall redstone", "/feed", "/back", "/afk", "/kit gold", "/fly", "/ci", "/kit redstone", "/hat"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For Redstone:"));
-                        sender.sendMessage(ChatColor.GRAY + "/kit iron");
-                        sender.sendMessage(ChatColor.GRAY + "4 Plots");
-                        sender.sendMessage(ChatColor.GRAY + "3 PlayerVault (/pv)");
-                        sender.sendMessage(ChatColor.GRAY + "/sellall redstone");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/kit gold");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
-                        sender.sendMessage(ChatColor.GRAY + "/kit redstone");
-                        sender.sendMessage(ChatColor.GRAY + "/hat");
+                        for (String redstoneperms : redstone) {
+                            sender.sendMessage(ChatColor.GRAY + redstoneperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("obsidian")) {
                     if (sender.hasPermission("wolfessentials.rank.obsidian")) {
+                        String[] obsidian = {"/kit iron", "5 Plots", "4 Playervaults (/pv)", "/sellall obsidian", "/feed", "/back", "/afk", "/kit gold", "/fly", "/ci", "/kit redstone", "/hat", "/kit obsidian"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For Obsidian:"));
-                        sender.sendMessage(ChatColor.GRAY + "/kit iron");
-                        sender.sendMessage(ChatColor.GRAY + "5 Plots");
-                        sender.sendMessage(ChatColor.GRAY + "4 PlayerVault (/pv)");
-                        sender.sendMessage(ChatColor.GRAY + "/sellall obsidian");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/kit gold");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
-                        sender.sendMessage(ChatColor.GRAY + "/kit redstone");
-                        sender.sendMessage(ChatColor.GRAY + "/hat");
-                        sender.sendMessage(ChatColor.GRAY + "/kit obsidian");
+                        for (String obsidianperms : obsidian) {
+                            sender.sendMessage(ChatColor.GRAY + obsidianperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("emerald")) {
                     if (sender.hasPermission("wolfessentials.rank.emerald")) {
+                        String[] emerald = {"/kit iron", "6 Plots", "5 Playervaults (/pv)", "/sellall emerald", "/feed and /heal", "/back", "/afk", "/kit gold", "/fly", "/ci", "/kit redstone", "/hat", "/kit obsidian", "/kit emerald"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For Emerald:"));
-                        sender.sendMessage(ChatColor.GRAY + "/kit iron");
-                        sender.sendMessage(ChatColor.GRAY + "6 Plots");
-                        sender.sendMessage(ChatColor.GRAY + "5 PlayerVault (/pv)");
-                        sender.sendMessage(ChatColor.GRAY + "/sellall emerald");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/kit gold");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
-                        sender.sendMessage(ChatColor.GRAY + "/kit redstone");
-                        sender.sendMessage(ChatColor.GRAY + "/hat");
-                        sender.sendMessage(ChatColor.GRAY + "/kit obsidian");
-                        sender.sendMessage(ChatColor.GRAY + "/kit emerald");
-                        sender.sendMessage(ChatColor.GRAY + "/heal");
+                        for (String emeraldperms : emerald) {
+                            sender.sendMessage(ChatColor.GRAY + emeraldperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("diamond")) {
                     if (sender.hasPermission("wolfessentials.rank.diamond")) {
+                        String[] diamond = {"/kit iron", "7 Plots", "6 Playervaults (/pv)", "/sellall diamond", "/feed", "/back", "/afk", "/kit gold", "/fly and /heal", "/ci", "/kit redstone", "/hat", "/kit obsidian", "/kit emerald", "/kit diamond", "/kit decor"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For Diamond:"));
-                        sender.sendMessage(ChatColor.GRAY + "/kit iron");
-                        sender.sendMessage(ChatColor.GRAY + "7 Plots");
-                        sender.sendMessage(ChatColor.GRAY + "6 PlayerVault (/pv)");
-                        sender.sendMessage(ChatColor.GRAY + "/sellall diamond");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/kit gold");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
-                        sender.sendMessage(ChatColor.GRAY + "/kit redstone");
-                        sender.sendMessage(ChatColor.GRAY + "/hat");
-                        sender.sendMessage(ChatColor.GRAY + "/kit obsidian");
-                        sender.sendMessage(ChatColor.GRAY + "/kit emerald");
-                        sender.sendMessage(ChatColor.GRAY + "/heal");
-                        sender.sendMessage(ChatColor.GRAY + "/kit diamond");
-                        sender.sendMessage(ChatColor.GRAY + "/kit decor");
+                        for (String diamondperms : diamond) {
+                            sender.sendMessage(ChatColor.GRAY + diamondperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("vip")) {
                     if (sender.hasPermission("wolfessentials.rank.vip")) {
+                        String[] vip = {"/kit iron", "7 Plots", "6 Playervaults (/pv)", "/sellall VIP", "/feed and /heal", "/back", "/afk", "/kit gold", "/fly", "/ci", "/kit redstone", "/hat", "/kit obsidian", "/kit emerald", "/kit diamond", "/kit decor", "/kit vip", "/kit vipbow"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For VIP:"));
-                        sender.sendMessage(ChatColor.GRAY + "/kit iron");
-                        sender.sendMessage(ChatColor.GRAY + "7 Plots");
-                        sender.sendMessage(ChatColor.GRAY + "6 PlayerVault (/pv)");
-                        sender.sendMessage(ChatColor.GRAY + "/sellall vip");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/kit gold");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
-                        sender.sendMessage(ChatColor.GRAY + "/kit redstone");
-                        sender.sendMessage(ChatColor.GRAY + "/hat");
-                        sender.sendMessage(ChatColor.GRAY + "/kit obsidian");
-                        sender.sendMessage(ChatColor.GRAY + "/kit emerald");
-                        sender.sendMessage(ChatColor.GRAY + "/heal");
-                        sender.sendMessage(ChatColor.GRAY + "/kit diamond");
-                        sender.sendMessage(ChatColor.GRAY + "/kit decor");
-                        sender.sendMessage(ChatColor.GRAY + "/kit vip");
-                        sender.sendMessage(ChatColor.GRAY + "/kit vipbow");
+                        for (String vipperms : vip) {
+                            sender.sendMessage(ChatColor.GRAY + vipperms);
+                        }
                     }
-                } else if (args[0].equalsIgnoreCase("halloween")) {
+                } else if (args[0].equalsIgnoreCase("spooky")) {
                     if (sender.hasPermission("wolfessentials.rank.halloween")) {
-                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions for Halloween:"));
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/autosell");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/feed and /heal");
-                        sender.sendMessage(ChatColor.GRAY + "Halloween tag (/tags)");
+                        String[] halloween = {"/fly", "/autosell", "/afk", "/feed and /heal", "Halloween tag (/tags)"};
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions for &cHalloween&9:"));
+                        for (String halloweenperms : halloween) {
+                            sender.sendMessage(ChatColor.GRAY + halloweenperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("trainee")) {
                     if (sender.hasPermission("wolfessentials.rank.trainee")) {
+                        String[] trainee = {"/tp", "/feed", "/fly", "/warn", "/kick", "/v"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For &cTrainee&9:"));
-                        sender.sendMessage(ChatColor.GRAY + "/tp");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/warn");
-                        sender.sendMessage(ChatColor.GRAY + "/kick");
-                        sender.sendMessage(ChatColor.GRAY + "/v");
+                        for (String traineeperms : trainee) {
+                            sender.sendMessage(ChatColor.GRAY + traineeperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("helper")) {
                     if (sender.hasPermission("wolfessentials.rank.helper")) {
+                        String[] helper = {"/tp", "/tphere", "/ci", "/fly", "/feed", "/dupeip", "/warn and /warnings", "/kick", "/tempmute", "/mute", "/god"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For &cHelper&9:"));
-                        sender.sendMessage(ChatColor.GRAY + "/tp");
-                        sender.sendMessage(ChatColor.GRAY + "/tphere");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
-                        sender.sendMessage(ChatColor.GRAY + "/nick");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/dupeip");
-                        sender.sendMessage(ChatColor.GRAY + "/warn and /warnings");
-                        sender.sendMessage(ChatColor.GRAY + "/kick");
-                        sender.sendMessage(ChatColor.GRAY + "/tempmute");
-                        sender.sendMessage(ChatColor.GRAY + "/mute");
-                        sender.sendMessage(ChatColor.GRAY + "/god");
+                        for (String helperperms : helper) {
+                            sender.sendMessage(ChatColor.GRAY + helperperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("moderator")) {
                     if (sender.hasPermission("wolfessentials.rank.mod")) {
+                        String[] moderator = {"/tp and /tphere", "/ci", "/fly", "/feed", "/dupeip", "/warn and /warnings", "/kick", "/tempmute and /mute", "/god", "/heal", "/tpo and /tpohere", "/ban and /tempban"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For &cModerator&9:"));
-                        sender.sendMessage(ChatColor.GRAY + "/tp and /tphere");
-                        sender.sendMessage(ChatColor.GRAY + "/tphere");
-                        sender.sendMessage(ChatColor.GRAY + "/ci");
-                        sender.sendMessage(ChatColor.GRAY + "/nick");
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/dupeip");
-                        sender.sendMessage(ChatColor.GRAY + "/warn and /warnings");
-                        sender.sendMessage(ChatColor.GRAY + "/kick");
-                        sender.sendMessage(ChatColor.GRAY + "/tempmute");
-                        sender.sendMessage(ChatColor.GRAY + "/mute");
-                        sender.sendMessage(ChatColor.GRAY + "/god");
-                        sender.sendMessage(ChatColor.GRAY + "/heal");
-                        sender.sendMessage(ChatColor.GRAY + "/tpo and /tpohere");
-                        sender.sendMessage(ChatColor.GRAY + "/ban and /tempban");
+                        for (String moderatorperms : moderator) {
+                            sender.sendMessage(ChatColor.GRAY + moderatorperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("admin")) {
                     if (sender.hasPermission("wolfessentials.rank.admin")) {
+                        String[] admin = {"/fly", "/heal", "/feed", "/ban and /tempban", "/mute and /tempmute", "/kick", "/ipban", "/dupeip", "/warn and /warnings", "/tp /tpo /tpohere /tphere", "/seen", "/broadcast (/bc)", "/afk", "/god"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For &cAdmin&9:"));
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/heal");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/ban");
-                        sender.sendMessage(ChatColor.GRAY + "/tempban");
-                        sender.sendMessage(ChatColor.GRAY + "/tempmute");
-                        sender.sendMessage(ChatColor.GRAY + "/mute");
-                        sender.sendMessage(ChatColor.GRAY + "/kick");
-                        sender.sendMessage(ChatColor.GRAY + "/ipban");
-                        sender.sendMessage(ChatColor.GRAY + "/dupeip");
-                        sender.sendMessage(ChatColor.GRAY + "/warn and /warnings");
-                        sender.sendMessage(ChatColor.GRAY + "/tp /tpo /tpohere /tphere");
-                        sender.sendMessage(ChatColor.GRAY + "/seen");
-                        sender.sendMessage(ChatColor.GRAY + "/nick (colour and format)");
-                        sender.sendMessage(ChatColor.GRAY + "/broadcast (/bc)");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/god");
+                        for (String adminperms : admin) {
+                            sender.sendMessage(ChatColor.GRAY + adminperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("jrdev")) {
                     if (sender.hasPermission("wolfessentials.rank.jrdev")) {
+                        String[] jrdev = {"/fly", "/back", "/heal and /feed", "/tp and /tpo", "/nick", "/broadcast", "/kick and /warn"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For &cJrDev&9:"));
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/back");
-                        sender.sendMessage(ChatColor.GRAY + "/heal and /feed");
-                        sender.sendMessage(ChatColor.GRAY + "/tp and /tpo");
-                        sender.sendMessage(ChatColor.GRAY + "/nick");
-                        sender.sendMessage(ChatColor.GRAY + "/broadcast");
-                        sender.sendMessage(ChatColor.GRAY + "/kick and /warn");
+                        for (String jrdevperms : jrdev) {
+                            sender.sendMessage(ChatColor.GRAY + jrdevperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("developer")) {
                     if (sender.hasPermission("wolfessentials.rank.dev")) {
@@ -284,24 +184,11 @@ public class rankperms implements CommandExecutor {
                     }
                 } else if (args[0].equalsIgnoreCase("co-owner")) {
                     if (sender.hasPermission("wolfessentials.rank.co")) {
+                        String[] co = {"/fly", "/heal and /feed", "/ban, /ipban and /tempban", "/mute and /tempmute", "/kick", "/dupeip", "/warn and /warnings", "/tp /tpo /tpohere /tphere", "/seen", "/broadcast (/bc)", "/afk", "/god"};
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9Permissions For &cCo-Owner&9:"));
-                        sender.sendMessage(ChatColor.GRAY + "/fly");
-                        sender.sendMessage(ChatColor.GRAY + "/heal");
-                        sender.sendMessage(ChatColor.GRAY + "/feed");
-                        sender.sendMessage(ChatColor.GRAY + "/ban");
-                        sender.sendMessage(ChatColor.GRAY + "/tempban");
-                        sender.sendMessage(ChatColor.GRAY + "/tempmute");
-                        sender.sendMessage(ChatColor.GRAY + "/mute");
-                        sender.sendMessage(ChatColor.GRAY + "/kick");
-                        sender.sendMessage(ChatColor.GRAY + "/ipban");
-                        sender.sendMessage(ChatColor.GRAY + "/dupeip");
-                        sender.sendMessage(ChatColor.GRAY + "/warn and /warnings");
-                        sender.sendMessage(ChatColor.GRAY + "/tp /tpo /tpohere /tphere");
-                        sender.sendMessage(ChatColor.GRAY + "/seen");
-                        sender.sendMessage(ChatColor.GRAY + "/nick (colour and format)");
-                        sender.sendMessage(ChatColor.GRAY + "/broadcast (/bc)");
-                        sender.sendMessage(ChatColor.GRAY + "/afk");
-                        sender.sendMessage(ChatColor.GRAY + "/god");
+                        for (String coperms : co) {
+                            sender.sendMessage(ChatColor.GRAY + coperms);
+                        }
                     }
                 } else if (args[0].equalsIgnoreCase("manager")) {
                     if (sender.hasPermission("wolfessentials.rank.manager")) {
