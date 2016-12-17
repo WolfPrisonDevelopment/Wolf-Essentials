@@ -23,213 +23,79 @@ public class setrank implements CommandExecutor {
                 } else {
                     if (args[1].equalsIgnoreCase("Iron")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&f&lIron&8&l]");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add plotme.limit.2");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.amount.1");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.commands.use");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Iron");
+                        String[] iron = {"essentials.kits.iron", "plotme.limit.2", "playervaults.amount.1", "playervaults.commands.use", "essentials.warps.iron", "essentials.feed", "essentials.back", "essentials.afk", "autosell.sellall.iron", "autosell.sellall"};
+                        for (String ironiterated : iron) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + ironiterated);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&f&lIron&8&l]");
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Iron");
+                        }
 
                     } else if (args[1].equalsIgnoreCase("Gold")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&6&lGold&8&l]");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add plotme.limit.3");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.amount.2");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.commands.use");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Gold");
+                        String[] gold = {"essentials.kits.iron", "plotme.limit.3", "playervaults.amount.2", "playervaults.commands.use", "essentials.warps.iron", "essentials.feed", "essentials.back", "essentials.afk", "autosell.sellall.iron", "autosell.sellall.gold", "autosell.sellall", "essentials.kits.gold", "essentials.warps.gold", "essentials.fly", "essentials.clearinventory"};
+                        for (String golditerated : gold) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + golditerated);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&6&lGold&8&l]");
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Gold");
+                        }
 
                     } else if (args[1].equalsIgnoreCase("redstone")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&4&lRedstone&8&l]");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add plotme.limit.4");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.amount.3");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.commands.use");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add esssentials.warps.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Redstone");
-
+                        String[] redstone = {"essentials.kits.iron", "plotme.limit.4", "playervaults.amount.3", "playervaults.commands.use", "essentials.warps.iron", "essentials.feed", "essentials.back", "essentials.afk", "essentials.hat", "autosell.sellall.iron", "autosell.sellall.gold", "autosell.sellall.redstone", "autosell.sellall", "essentials.kits.redstone", "esssentials.warps.redstone", "essentials.kits.gold", "essentials.warps.gold", "essentials.fly", "essentials.clearinventory"};
+                        for (String redstoneiterated : redstone) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + redstoneiterated);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&4&lRedstone&8&l]");
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Redstone");
+                        }
                     } else if (args[1].equalsIgnoreCase("obsidian")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&5&lObsidian&8&l]");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add plotme.limit.5");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.amount.4");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.commands.use");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add esssentials.warps.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Obsidian");
+                        String[] obsidian = {"essentials.kits.iron", "plotme.limit.5", "playervaults.amount.4", "playervaults.commands.use", "essentials.warps.iron", "essentials.feed", "essentials.back", "essentials.back", "essentials.afk", "essentials.hat", "autosell.sellall.iron", "autosell.sellall.gold", "autosell.sellall.redstone", "autosell.sellall.obsidian", "autosell.sellall", "essentials.kits.obsidian", "essentials.warps.obsidian", "essentials.kits.redstone", "esssentials.warps.redstone", "essentials.kits.gold", "essentials.warps.gold", "autosell.toggle", "essentials.fly", "essentials.clearinventory"};
+                        for (String obsidianiterated : obsidian) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + obsidianiterated);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&5&lObsidian&8&l]");
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Obsidian");
+                        }
 
                     } else if (args[1].equalsIgnoreCase("emerald")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&a&lEmerald&8&l]");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add plotme.limit.6");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.amount.5");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.commands.use");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add esssentials.warps.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.heal");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Emerald");
+                        String[] emerald = {"essentials.kits.iron", "plotme.limit.6", "playervaults.amount.5", "playervaults.commands.use", "essentials.warps.iron", "essentials.feed", "essentials.back", "essentials.afk", "essentials.hat", "autosell.sellall.iron", "autosell.sellall.gold", "autosell.sellall.redstone", "autosell.sellall.obsidian", "autosell.sellall.emerald", "autosell.sellall", "essentials.kits.emerald", "essentials.warps.emerald", "essentials.kits.obsidian", "essentials.warps.obsidian", "essentials.kits.redstone", "esssentials.warps.redstone", "essentials.heal", "essentials.kits.gold", "essentials.warps.gold", "autosell.toggle", "essentials.fly", "essentials.clearinventory"};
+                        for (String emeralditerated : emerald) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + emeralditerated);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&a&lEmerald&8&l]");
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Emerald");
+                        }
 
                     } else if (args[1].equalsIgnoreCase("diamond")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&b&lDiamond&8&l]");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add plotme.limit.7");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.amount.6");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.commands.use");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.diamond");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.diamond");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.diamond");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add esssentials.warps.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.heal");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.decor");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Diamond");
+                        String[] diamond = {"essentials.kits.iron", "plotme.limit.7", "playervaults.amount.6", "playervaults.commands.use", "essentials.warps.iron", "essentials.feed", "essentials.back", "essentials.afk", "essentials.hat", "autosell.sellall.iron", "autosell.sellall.gold", "autosell.sellall.redstone", "autosell.sellall.obsidian", "autosell.sellall.emerald", "autosell.sellall.diamond", "autosell.sellall", "essentials.kits.diamond", "essentials.warps.diamond", "essentials.kits.emerald", "essentials.warps.emerald", "essentials.kits.obsidian", "essentials.warps.obsidian", "essentials.kits.redstone", "esssentials.warps.redstone", "essentials.heal", "essentials.kits.gold", "essentials.warps.gold", "essentials.kits.decor", "autosell.toggle", "essentials.fly", "essentials.clearinventory"};
+                        for (String diamonditerated : diamond) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + diamonditerated);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&b&lDiamond&8&l]");
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " Diamond");
+                        }
 
                     } else if (args[1].equalsIgnoreCase("VIP")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&e&l+&d&lV&6&lI&b&lP&e&l+&8&l]");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add plotme.limit.8");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.amount.7");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add playervaults.commands.use");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.back");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.nick");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.hat");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.iron");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.diamond");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall.VIP");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.sellall");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.VIP");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.vipbow");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.vip");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.diamond");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.diamond");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.emerald");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.obsidian");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add esssentials.warps.redstone");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.heal");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.warps.gold");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.kits.decor");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.clearinventory");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " VIP");
+                        String[] VIP = {"essentials.kits.iron", "plotme.limit.8", "playervaults.amount.7", "playervaults.commands.use", "essentials.warps.iron", "essentials.feed", "essentials.back", "essentials.nick", "essentials.afk", "essentials.hat", "autosell.sellall.iron", "autosell.sellall.gold", "autosell.sellall.redstone", "autosell.sellall.obsidian", "autosell.sellall.emerald", "autosell.sellall.diamond", "autosell.sellall.VIP", "autosell.sellall", "essentials.kits.VIP", "essentials.kits.vipbow", "essentials.warps.vip", "essentials.kits.diamond", "essentials.warps.diamond", "essentials.kits.emerald", "essentials.warps.emerald", "essentials.kits.obsidian", "essentials.warps.obsidian", "essentials.kits.redstone", "esssentials.warps.redstone", "essentials.heal", "essentials.kits.gold", "essentials.warps.gold", "essentials.kits.decor", "autosell.toggle", "essentials.clearinventory"};
+                        for (String VIPiterated : VIP) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + VIPiterated);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " suffix &8&l[&e&l+&d&lV&6&lI&b&lP&e&l+&8&l]");
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "purchaseanouncement " + playerName + " VIP");
+                        }
                     } else if (args[1].equalsIgnoreCase("Spooky")) {
                         String playerName = args[0];
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.fly");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add autosell.toggle");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.afk");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.feed");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add essentials.heal");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add deluxetags.tag.halloween");
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "pex user " + playerName + " add wolfessentials.rank.halloween");
+                        String[] spooky = {"essentials.fly", "autosell.toggle", "essentials.afk", "essentials.feed", "essentials.heal", "deluxetags.tag.halloween", "wolfessentials.rank.halloween"};
+                        for (String spookyiterated : spooky) {
+                            String basecommand = "pex user " + playerName + " add ";
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), basecommand + spookyiterated);
+                        }
                     }
                 }
             } else {

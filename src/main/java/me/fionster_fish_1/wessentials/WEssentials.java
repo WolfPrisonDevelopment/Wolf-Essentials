@@ -67,7 +67,7 @@ public class WEssentials extends JavaPlugin {
         getCommand("wgma").setExecutor(new wgm(this));
         getCommand("wgmsp").setExecutor(new wgm(this));
     }
-
+    
     public void config() {
         try {
             if (!getDataFolder().exists()) {
