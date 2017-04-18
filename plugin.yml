@@ -47,6 +47,10 @@ commands:
         description: Set a players staff rank.
     updates:
         description: See whats happening.
+    acban:
+        description: Anticheat ban
+    acbanconfirm:
+        description: Antichat ban confirmation
 
 permissions:
     wolfessentials.gm:
@@ -197,3 +201,7 @@ permissions:
         default: op
     wolfessentials.updates:
         default: true
+    wolfessentials.acban:
+        default: op
+    wolfessentials.acbanconfirm:
+        default: op
